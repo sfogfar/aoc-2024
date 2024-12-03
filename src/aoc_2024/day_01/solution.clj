@@ -1,14 +1,7 @@
 (ns aoc-2024.day-01.solution
-  (:gen-class)
-  (:require [clojure.string :as str]))
-
-(defn get-lines
-  [path]
-  (->> path
-   (slurp)
-   (str/split-lines)
-   (map #(str/split % #"   "))
-   (map #(map parse-long %))))
+  (:gen-class) 
+  (:require
+   [aoc-2024.utils :as utils]))
 
 (defn get-list
   [lines position]
@@ -39,7 +32,7 @@
     (apply + similarities)))
 
 (def input-path  "src/aoc_2024/day_01/input.txt")
-(def lines (get-lines input-path))
+(def lines (utils/get-lines input-path))
 (def part-one-solution (get-total-distance lines)) ; 1223326
 (def part-two-solution (get-similarity-score lines)) ; 21070419
 
