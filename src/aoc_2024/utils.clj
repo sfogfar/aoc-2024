@@ -15,3 +15,7 @@
   (concat
    (take-while pred coll)
    (rest (drop-while pred coll))))
+
+(defn slurp-str
+  [path]
+  (str/escape (slurp path) {\" "\\\""}))
