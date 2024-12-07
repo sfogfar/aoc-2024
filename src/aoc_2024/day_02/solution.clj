@@ -4,7 +4,7 @@
    [aoc-2024.utils :as utils]))
 
 (def input-path  "src/aoc_2024/day_02/input.txt")
-(def reports (utils/get-lines input-path))
+(def reports (utils/str->num-linesmeric input-path))
 
 (defn inc?
   [report]

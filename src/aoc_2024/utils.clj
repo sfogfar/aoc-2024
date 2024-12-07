@@ -2,7 +2,7 @@
   (:require
    [clojure.string :as str]))
 
-(defn get-lines
+(defn str->num-lines
   [path]
   (->> path
        (slurp)

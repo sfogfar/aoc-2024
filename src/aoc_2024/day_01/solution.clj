@@ -32,7 +32,7 @@
     (apply + similarities)))
 
 (def input-path  "src/aoc_2024/day_01/input.txt")
-(def lines (utils/get-lines input-path))
+(def lines (utils/str->num-lines input-path))
 (def part-one-solution (get-total-distance lines)) ; 1223326
 (def part-two-solution (get-similarity-score lines)) ; 21070419
 
